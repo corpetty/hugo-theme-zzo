@@ -14,5 +14,7 @@
 
   {{ if and (.Params.Distill.SupportFiles.Bibliography) (fileExists ((printf "%s%s" .File.Dir .Params.Distill.SupportFiles.Bibliography))) }}
     <d-bibliography class="dappendix_contents" src="{{ .RelPermalink }}{{ .Params.Distill.SupportFiles.Bibliography }}"></d-bibliography>  
+    <d-footnote-list></d-footnote-list>
+    <d-citation-list></d-citation-list>
   {{ end }}
 </d-appendix>
