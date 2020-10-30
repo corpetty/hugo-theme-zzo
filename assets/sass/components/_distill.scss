@@ -1,0 +1,11 @@
+d-appendix {
+  @include themify($themes) {
+    color: themed('content-pre-number-color') !important;
+  }
+}
+
+d-cite {
+  @include themify($themes) {
+    color: themed('toc-label-color');
+  }
+}

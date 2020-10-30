@@ -1,8 +1,8 @@
-<d-appendix class="dappendix">
+<d-appendix>
   {{ if and (.Params.Distill.SupportFiles.Appendix) (fileExists ((printf "%s%s" .File.Dir .Params.Distill.SupportFiles.Appendix))) }}
     {{ readFile (printf "%s%s" .File.Dir .Params.Distill.SupportFiles.Appendix) | safeHTML | markdownify }}
   {{ end }}
-  <div class="dappendix__contents">
+  <div>
   {{ if .Site.Params.SourcePrefix }}
     {{ $srcFileURL := (printf "%s/content/%s" .Site.Params.SourcePrefix .File.Dir) }}
     <h3>Updates and Corrections</h3>
@@ -13,7 +13,7 @@
   </div>  
 
   {{ if and (.Params.Distill.SupportFiles.Bibliography) (fileExists ((printf "%s%s" .File.Dir .Params.Distill.SupportFiles.Bibliography))) }}
-    <d-bibliography class="dappendix_contents" src="{{ .RelPermalink }}{{ .Params.Distill.SupportFiles.Bibliography }}"></d-bibliography>  
+    <d-bibliography src="{{ .RelPermalink }}{{ .Params.Distill.SupportFiles.Bibliography }}"></d-bibliography>  
     <d-footnote-list></d-footnote-list>
     <d-citation-list></d-citation-list>
   {{ end }}
