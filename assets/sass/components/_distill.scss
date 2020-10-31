@@ -9,3 +9,9 @@ d-cite {
     color: themed('toc-label-color');
   }
 }
+
+d-footnote {
+  @include themify($themes) {
+    color: themed('toc-label-color');
+  }
+}
